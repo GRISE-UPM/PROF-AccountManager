@@ -15,16 +15,15 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- <maven.compiler.source>1.7</maven.compiler.source> -->
 		<!-- <maven.compiler.target>1.7</maven.compiler.target> -->
-		<junit-platform.version>1.6.2</junit-platform.version>
-		<junit-jupiter.version>5.6.2</junit-jupiter.version>
+		<junit-jupiter.version>5.10.0</junit-jupiter.version>
 		<maven.version>3.8.0</maven.version>
-		<java.version>15</java.version>
-		<mockito.version>1.10.19</mockito.version>
+		<java.version>11</java.version>
+		<mockito.version>5.7.0</mockito.version>
 	</properties>
 
 	<dependencies>
 
-		<!-- Test runner for jUnit 5 -->
+		<!--  Test runner for jUnit 5 -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
@@ -32,11 +31,27 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- The API where annotations, e.g., @Test, are defined -->
+		<!--  The API where annotations, e.g., @Test, are defined -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
 			<version>${junit-jupiter.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Extension for jupiter -->
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.hamcrest/hamcrest -->
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest</artifactId>
+			<version>2.2</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -45,6 +60,16 @@
 			<artifactId>sqlite-jdbc</artifactId>
 			<version>3.41.2.2</version>
 		</dependency>
+		
+<!-- https://mvnrepository.com/artifact/uk.org.webcompere/system-stubs-jupiter -->
+<dependency>
+    <groupId>uk.org.webcompere</groupId>
+    <artifactId>system-stubs-jupiter</artifactId>
+    <version>2.1.5</version>
+    <scope>test</scope>
+</dependency>
+
+
 
 	</dependencies>
 
